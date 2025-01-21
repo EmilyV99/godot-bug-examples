@@ -1,0 +1,21 @@
+[gd_scene load_steps=6 format=3 uid="uid://er5vxmi5on8h"]
+
+[ext_resource type="Texture2D" uid="uid://cjrtxibmd2e5g" path="res://head_left.png" id="1_6uqi0"]
+[ext_resource type="Texture2D" uid="uid://uqrltatvhu2f" path="res://head_n.png" id="2_ppyta"]
+[ext_resource type="Texture2D" uid="uid://ctn3f53wqy0q7" path="res://head_s.png" id="3_ykrsh"]
+[ext_resource type="Script" uid="uid://c617j6d25evep" path="res://testsprite.gd" id="4_ppyta"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_g14j6"]
+diffuse_texture = ExtResource("1_6uqi0")
+normal_texture = ExtResource("2_ppyta")
+specular_texture = ExtResource("3_ykrsh")
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(8, 8)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = SubResource("CanvasTexture_g14j6")
+script = ExtResource("4_ppyta")
